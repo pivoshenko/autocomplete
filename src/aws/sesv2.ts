@@ -2593,6 +2593,14 @@ const completionSpec: Fig.Spec = {
           },
         },
         {
+          name: "--max-delivery-seconds",
+          description:
+            "The maximum amount of time, in seconds, that Amazon SES API v2 will attempt delivery of email. If specified, the value must greater than or equal to 300 seconds (5 minutes) and less than or equal to 50400 seconds (840 minutes)",
+          args: {
+            name: "long",
+          },
+        },
+        {
           name: "--cli-input-json",
           description:
             "Performs service operation based on the JSON string provided. The JSON string follows the format provided by ``--generate-cli-skeleton``. If other arguments are provided on the command line, the CLI values will override the JSON-provided values. It is not possible to pass arbitrary binary values using a JSON-provided value as the string will be taken literally",
@@ -2749,6 +2757,14 @@ const completionSpec: Fig.Spec = {
         {
           name: "--custom-redirect-domain",
           description: "The domain to use to track open and click events",
+          args: {
+            name: "string",
+          },
+        },
+        {
+          name: "--https-policy",
+          description:
+            "The https policy to use for tracking open and click events. If the value is OPTIONAL or HttpsPolicy is not specified, the open trackers use HTTP and click tracker use the original protocol of the link. If the value is REQUIRE, both open and click tracker uses HTTPS and if the value is REQUIRE_OPEN_ONLY open tracker uses HTTPS and link tracker is same as original protocol of the link",
           args: {
             name: "string",
           },
